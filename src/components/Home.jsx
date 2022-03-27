@@ -6,12 +6,8 @@ const Home = () => {
    
     
     const [blogs,setBlogs] = useState(null);
+    const [isLoading , setIsLoading] = useState(true);
 
-
-    const handleDelete = (id) => {
-        const newBlogs = blogs.filter(blog=>blog.id !== id);
-        setBlogs(newBlogs);
-    }
 
    useEffect(() =>{
        fetch('http://localhost:8000/blogs')
@@ -20,12 +16,14 @@ const Home = () => {
        })
        .then(data=>{
             setBlogs(data);
+            setIsLoading(false);
        })
    },[])
 
     return ( 
         <div className="homeContent">
-          {blogs && <Bloglist blogs={blogs} title={"All Blogs"} handleDelete={handleDelete}/>}
+            {isLoading && <div>Loading Blogs ......</div>}
+            {blogs && <Bloglist blogs={blogs} title={"All Blogs"}/>}
         </div>
      );
 }
