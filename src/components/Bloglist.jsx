@@ -8,7 +8,7 @@ const Bloglist = ({blogs , title , handleDelete}) => {
                     <div className="preview" key={blog.id}> 
                         <h2>{blog.title}</h2>
                         <h5>Author : {blog.author}</h5>
-                        <p>{blog.body}</p>    
+                        {/* <p>{blog.body}</p>     */}
                     </div>
                     <div className="options">
                         <ul>
