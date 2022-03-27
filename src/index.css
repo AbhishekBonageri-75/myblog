@@ -15,7 +15,8 @@
   border-bottom: 1px solid #dfdbdb;
 }
 .navbar h1 {
-  color: #f1356d;
+  /* color: #f1356d; */
+  color: #4285f4;
 }
 .navbar .links {
   margin-left: auto;
@@ -26,10 +27,50 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: #5290f3;
 }
 .content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+}
+
+.fulldiv {
+  display: flex;
+  /* border: 1px solid green; */
+  /* width: 100%; */
+  margin: 0 auto;
+  border: 1.5px solid #b0c9fa;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: #f8fbff;
+}
+.preview {
+  /* border: 1px solid #b1b2b4; */
+  /* border-radius: 10px; */
+  padding: 10px;
+  margin: 10px;
+  width: 700px;
+}
+.options {
+  display: flex;
+  /* border: 1px solid #4285f4; */
+  width: 250px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 3px;
+}
+.options ul {
+  /* border: 1px solid #4285f4; */
+  margin-left: none;
+}
+.options ul li {
+  border: 1px solid #d1d2d4;
+  list-style: none;
+  display: inline;
+  border-radius: 2px;
+  padding: 3px;
+  margin: 5px;
 }
