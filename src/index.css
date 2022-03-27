@@ -17,6 +17,7 @@
 .navbar h1 {
   /* color: #f1356d; */
   color: #4285f4;
+  /* color: #5d98f7; */
 }
 .navbar .links {
   margin-left: auto;
@@ -40,10 +41,13 @@
   /* border: 1px solid green; */
   /* width: 100%; */
   margin: 0 auto;
-  border: 1.5px solid #b0c9fa;
+  border-bottom: 1.5px solid #eceff5;
   margin-bottom: 1rem;
   border-radius: 10px;
-  background-color: #f8fbff;
+  /* background-color: #f7f9fc; */
+}
+.fulldiv:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
 .preview {
   /* border: 1px solid #b1b2b4; */
