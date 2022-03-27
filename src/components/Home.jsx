@@ -13,13 +13,17 @@ const Home = () => {
         {title: "Web Development",body:"Blog content ... 3" , author: "Ravi",id:3}
     ]);
 
+
+    const handleDelete = (id) => {
+        const newBlogs = blogs.filter(blog=>blog.id !== id);
+        setBlogs(newBlogs);
+    }
+
    
 
     return ( 
         <div className="homeContent">
-           <Bloglist blogs={blogs} title={"All Blogs"}/>
-           <Bloglist blogs={blogs.filter((blog)=>blog.author==="Abhishek")} title={"Abhishek's Blogs"}/> {/* searching for a specific blog by its author */}
-           
+           <Bloglist blogs={blogs} title={"All Blogs"} handleDelete={handleDelete}/>
         </div>
      );
 }

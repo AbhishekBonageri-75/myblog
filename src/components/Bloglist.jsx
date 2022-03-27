@@ -1,5 +1,5 @@
 import React from "react";
-const Bloglist = ({blogs , title}) => {
+const Bloglist = ({blogs , title , handleDelete}) => {
     return ( 
         <div className="bloglist">
             <h1 style={{fontWeight: 'bold', color: '#5d98f7'}}>{title}</h1>
@@ -12,8 +12,7 @@ const Bloglist = ({blogs , title}) => {
                     </div>
                     <div className="options">
                         <ul>
-                            <li>Delete</li>
-                            <li>Edit</li>
+                            <li><button onClick={()=> handleDelete(blog.id)}>Delete</button></li>
                         </ul>
                     </div>
                 </div>
