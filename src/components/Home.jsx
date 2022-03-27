@@ -1,11 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import Bloglist from "./Bloglist";
 
 const Home = () => {
-    const [title , setTitle] = useState();
-    const [author , setAuthor] = useState();
-    const [body , setBody] = useState();
+   
     
     const [blogs,setBlogs] = useState([
         {title: "Mobile Development",body:"Blog content ... 1" , author: "Abhishek",id:1},
@@ -19,7 +17,9 @@ const Home = () => {
         setBlogs(newBlogs);
     }
 
-   
+   useEffect(() =>{
+       console.log("Rendered"); // this will be called everytime the component is rendered
+   })
 
     return ( 
         <div className="homeContent">
